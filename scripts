@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=0 python main.py --model_name=model_van-gogh --phase=inference --image_size=1280 ii_dir=/home/pangara/Documents/PhD/Coursework/CSC586B/adaptive-style-transfer/data/sample_photographs/ save_dir=/home/pangara/Documents/PhD/Coursework/CSC586B/adaptive-style-transfer/sample_photographs/processed_images/
