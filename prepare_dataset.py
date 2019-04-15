@@ -101,7 +101,7 @@ class PlacesDataset():
          '/v/village', '/v/vineyard', '/v/volcano', '/w/waterfall', '/w/watering_hole', '/w/wave',
          '/w/wheat_field', '/z/zen_garden', '/a/alcove', '/a/apartment-building/outdoor', '/a/artists_loft',
          '/b/building_facade', '/c/cemetery']
-    categories_names = [x[1:] for x in categories_names]
+    
 
     def __init__(self, path_to_dataset):
         self.dataset = []
@@ -118,7 +118,7 @@ class PlacesDataset():
 
     def get_batch(self, augmentor, batch_size=1):
         """
-        Generate bathes of images with attached labels(place category) in two different formats:
+        Generate batches of images with attached labels(place category) in two different formats:
         textual and one-hot-encoded.
         Args:
             augmentor: Augmentor object responsible for augmentation pipeline
@@ -153,7 +153,5 @@ class PlacesDataset():
         while True:
             batch = self.get_batch(augmentor=augmentor, batch_size=batch_size)
             queue.put(batch)
-
-
 
 

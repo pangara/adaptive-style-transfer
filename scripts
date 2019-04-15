@@ -1,1 +1,13 @@
 CUDA_VISIBLE_DEVICES=0 python main.py --model_name=model_van-gogh --phase=inference --image_size=1280 ii_dir=/home/pangara/Documents/PhD/Coursework/CSC586B/adaptive-style-transfer/data/sample_photographs/ save_dir=/home/pangara/Documents/PhD/Coursework/CSC586B/adaptive-style-transfer/sample_photographs/processed_images/
+
+
+CUDA_VISIBLE_DEVICES=0 python main.py \
+                 --model_name=model_van-gogh \
+                 --phase=inference \
+                 --image_size=1280 \
+                 --ii_dir ./data/sample_photographs/ \
+                 --save_dir=./data/processed_images/
+
+
+
+gcloud compute scp adaptive-style-transfer.zip pangara@instance-2:~ --zone "us-west1-b"
